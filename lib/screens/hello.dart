@@ -7,10 +7,10 @@ class HelloScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hello"),
+        title: const Text("Profil"),
       ),
       body: const Center(
-        child: Text("Hello"),
+        child: Text("Profil geliştirmesi ileriki günlerde hazır olacaktır"),
       ),
     );
   }

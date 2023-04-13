@@ -107,7 +107,7 @@ class BurclarAnasayfa extends StatelessWidget {
             return const [
               PopupMenuItem(
                 child: Text(
-                  "Ana Sayfa",
+                  "Profil",
                   style: TextStyle(
                     fontFamily: 'Kalam',
                   ),
