@@ -7,14 +7,44 @@ class Burc extends StatelessWidget {
   final String burcDetay;
   final String burcFoto;
 
-  Burc({required this.burcAdi, required this.burcTarihi, required this.burcDetay, required this.burcFoto});
+  Burc({
+    required this.burcAdi,
+    required this.burcTarihi,
+    required this.burcDetay,
+    required this.burcFoto,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 197, 59, 49),
-        title: Text(burcAdi, style: TextStyle(fontSize: 27),),
+        title: Text(
+          burcAdi,
+          style: TextStyle(fontSize: 27),
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.sentiment_satisfied),
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return AlertDialog(
+                    title: Text(''),
+                    content: Text('Olumsuz bir şey okuduysan kafana takma :) '),
+                    actions: [
+                      TextButton(
+                        child: Text('Kapat'),
+                        onPressed: () => Navigator.of(context).pop(),
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+          ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -32,21 +62,27 @@ class Burc extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20,),
-            
+            SizedBox(
+              height: 20,
+            ),
             Text(
               "$burcTarihi",
-              style: TextStyle(fontSize: 20.0, color: Colors.red, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+              style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Padding(
-              padding: const EdgeInsets.only(left: 15), 
+              padding: const EdgeInsets.only(left: 15),
               child: Text(
                 "$burcDetay",
                 style: TextStyle(fontSize: 20.0),
               ),
             ),
-            
           ],
         ),
       ),
