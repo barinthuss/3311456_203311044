@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 class Burc {
   final String burcAdi;
@@ -86,5 +86,5 @@ class Burc {
           
     ];
   }
-}
+}*/
 

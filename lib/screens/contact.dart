@@ -8,6 +8,7 @@ class ContactScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+      backgroundColor: Colors.red,
         title: Text("Sosyal Medya Hesaplarımız"),
       ),
       body: Column(
@@ -17,32 +18,15 @@ class ContactScreen extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      SizedBox(width: 100),
-                      Container(
-                        child: Center(
-                          child:  Text(
-                        "Twitter",
-                        style: TextStyle(
-                          fontSize: 30,
-                        ),
-                      ),
-                        ),
-                      ),
-                    ],
-                  ),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                     
                       InkWell(
                         onTap: () {
                           launch('https://twitter.com/barinthuss');
                         },
                         child: Container(
-                          
                           height: 100,
                           width: 100,
                           child: Image(
@@ -56,8 +40,8 @@ class ContactScreen extends StatelessWidget {
                           launch('https://twitter.com/barinthuss');
                         },
                         child: Container(
-                          height: 100,
-                          width: 100,
+                          height: 97,
+                          width: 97,
                           child: Image(
                             image: AssetImage("assets/resimler/Instagram.png"),
                           ),
